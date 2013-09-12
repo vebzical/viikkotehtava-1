@@ -11,6 +11,10 @@
     <div>
         <h1>Viikkotehtava 1</h1>
         <asp:HyperLink runat="server" ID="Hyperlink1" NavigateUrl="~/Tehtava1.aspx">Viikkotehtava1</asp:HyperLink>
+        <h1>Database demo</h1>
+        <asp:HyperLink runat="server" ID="Hyperlink2" NavigateUrl="~/g2456_DBdemo.aspx">Viikkotehtava1</asp:HyperLink>
+        <h1>paikallinen databaase Demo 1</h1>
+        <asp:HyperLink runat="server" ID="Hyperlink3" NavigateUrl="~/g2456_LocalDBdemo.aspx">Viikkotehtava1</asp:HyperLink>
     </div>
     </form>
 </body>
