@@ -11,7 +11,7 @@ public partial class g2456_valuttamunnin : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        nimi.Text = (String)Session["nimi"];
     }
     protected void Button1_Click(object sender, EventArgs e)
     {

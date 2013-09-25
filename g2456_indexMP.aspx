@@ -12,11 +12,7 @@
         <asp:HyperLink runat="server" ID="Hyperlink3" NavigateUrl="~/g2456_LocalDBdemo.aspx">Viikkotehtava1</asp:HyperLink>
         <h1>Viikon 38 tuntiharkat</h1>
         <asp:HyperLink runat="server" ID="Hyperlink4" NavigateUrl="~/g2456_age.aspx">Viikkotehtava1</asp:HyperLink>
-        <h1>Tehtävär 1 & 2</h1>
-        <asp:TextBox> </asp:TextBox>
-        <asp:Button />
-        <asp:Button />
-        <asp:Button />
+        <h1>Tehtävät 1 & 2</h1>
     </div>
 </asp:Content>
 
