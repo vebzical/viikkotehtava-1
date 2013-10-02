@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="teht3.master.cs" Inherits="teht3" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vepsä saatana</title>
+    <link href="~/CSS/demoSite.css" rel="stylesheet" type="text/css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <img src="images/asp.net-banner.jpg"/>
+        <br />
+        <asp:Menu ID="MainMenu" Orientation="Horizontal" runat="server" class="menu" OnMenuItemClick="MainMenu_MenuItemClick">
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                <asp:MenuItem Text="Salesan leffat" Value="Salesa"></asp:MenuItem>
+                <asp:MenuItem Text="Contact" Value="Contact"></asp:MenuItem>
+                <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:TextBox ID="txtlaatikko" Text="Moi" runat="server"></asp:TextBox>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+        <h1 class="H1">JAMK/Teknologia/ICT</h1>
+</body>
+</html>
