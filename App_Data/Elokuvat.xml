@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Movie_database>
+	<Elokuva>
+	    <Nimi>Anaalin valkaisu</Nimi>
+	    <Ohjaaja>Seppo Räty</Ohjaaja>
+	    <Genre>Draama</Genre>
+	    <Tahdet>3</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Peili</Nimi>
+	    <Ohjaaja>Kimmo Merikivi</Ohjaaja>
+	    <Genre>Action</Genre>
+	    <Tahdet>1</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Reikiä sateenvarjossa</Nimi>
+	    <Ohjaaja>Pekka Puu</Ohjaaja>
+	    <Genre>Komedia</Genre>
+	    <Tahdet>5</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>ASD-Kun aika ei riitä</Nimi>
+	    <Ohjaaja>Lars Gustafson</Ohjaaja>
+	    <Genre>Western</Genre>
+	    <Tahdet>0</Tahdet>
+	</Elokuva>
+	<Elokuva>
+	    <Nimi>Huono maku: Tarina melankolisista maanviljelijäkääpiöistä</Nimi>
+	    <Ohjaaja>Heikki Vajaaoksa</Ohjaaja>
+	    <Genre>Southern Texas Gore Splatter</Genre>
+	    <Tahdet>5</Tahdet>
+	</Elokuva>
+</Movie_database>
