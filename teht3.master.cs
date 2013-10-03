@@ -27,6 +27,8 @@ public partial class teht3 : System.Web.UI.MasterPage
                 break;
             case "Contact": response.Redirect("~/g2456_teht3_contact.aspx");
                 break;
+            case "RSS": response.Redirect("~/g2456_rssfeed.aspx");
+                break;
             default:
                 break;
         }
