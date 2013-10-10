@@ -36,7 +36,7 @@ public partial class g2456_FinnKinoMovies : System.Web.UI.Page
     {
         string theatreShows = urlToMovies + myListBox.SelectedItem.Value;
         myDataSource.DataFile = theatreShows;
-
+        myRepeater.DataSource = myDataSource;
         myRepeater.DataBind();
 
     }
