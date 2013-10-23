@@ -50,7 +50,7 @@ public partial class g2456_teht4 : System.Web.UI.Page
                 }
             }
             Autot = autot.Autot;
-            ViewState["AutoLista"] = Autot;
+            ViewState["AutotLista"] = Autot;
             List<string> merkit = new List<string>();
             merkit.Add("Kaikki");
 
@@ -155,6 +155,8 @@ public partial class g2456_teht4 : System.Web.UI.Page
                 return a.Merkki.ToLower().Contains(haku.ToLower()) || a.Malli.ToLower().Contains(haku.ToLower()); 
             }
         );
+
+        loadListWiew(results);
     }
 
     #region luokat
