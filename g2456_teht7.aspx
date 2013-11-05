@@ -16,6 +16,7 @@
         OnRowDeleting="autoNakyma_RowDeleting" 
         OnRowEditing="autoNakyma_RowEditing" 
         OnRowUpdating="autoNakyma_RowUpdating" >
+
     </asp:GridView>
     <asp:Button ID="addNew" runat="server" OnClick="addNew_Click" Text="Lisää uusi" />
 </asp:Content>

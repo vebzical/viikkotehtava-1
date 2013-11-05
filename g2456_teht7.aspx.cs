@@ -44,13 +44,11 @@ public partial class g2456_teht7 : System.Web.UI.Page
             autoLista = (List<Auto>)ViewState["autoLista"];
         }
     }
-
     protected void initMyStuff() 
     {
         autoLista = BLAutot.HaeAutot();
         toGridView(autoLista);
     }
-
     protected void toGridView(List<Auto> autoLista)
     {
         ViewState["autoLista"] = autoLista;
@@ -58,37 +56,31 @@ public partial class g2456_teht7 : System.Web.UI.Page
         autoNakyma.DataSource = autoLista;
         autoNakyma.DataBind();
     }
-
     protected void autoNakyma_Sorting(object sender, GridViewSortEventArgs e)
     {
         GridViewSortExpression = e.SortExpression;
         toGridView(BLAutot.SortList(autoLista, GridViewSortExpression, GetSortDirection()));
     }
-
     protected void autoNakyma_PageIndexChanging(object sender, GridViewPageEventArgs e)
     {
         autoNakyma.PageIndex = e.NewPageIndex;
         toGridView(autoLista);
     }
-
     protected void autoNakyma_RowDeleting(object sender, GridViewDeleteEventArgs e)
     {
         autoLista.RemoveAt(e.RowIndex);
         toGridView(autoLista);
     }
-
     protected void autoNakyma_RowEditing(object sender, GridViewEditEventArgs e)
     {
         autoNakyma.EditIndex = e.NewEditIndex;
         toGridView(autoLista);
     }
-
     protected void autoNakyma_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
     {
         autoNakyma.EditIndex = -1;
         toGridView(autoLista);
     }
-
     protected void autoNakyma_RowUpdating(object sender, GridViewUpdateEventArgs e)
     {
         GridViewRow row = autoNakyma.Rows[e.RowIndex];
@@ -104,9 +96,14 @@ public partial class g2456_teht7 : System.Web.UI.Page
         autoNakyma.EditIndex = -1;
         toGridView(autoLista);
     }
-
     protected void addNew_Click(object sender, EventArgs e)
     {
+        autoLista.Add(new Auto());
+        autoLista = BLAutot.SortList(autoLista, "Malli", "ASC");
+
+        autoNakyma.EditIndex = 0;
+
+        toGridView(autoLista);
 
     }
 }
