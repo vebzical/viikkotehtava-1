@@ -35,15 +35,30 @@ public class BLAutot
         Serialisointi.SerialisoiXml(HttpContext.Current.Server.MapPath("~/App_Data/WanhatAutot.xml"), autot);
     }
 
-    public static List<Auto> sortList(List<Auto> autoLista, SortDirection sd, string se)
+    public static List<Auto> SortList(List<Auto> autoLista, string GridViewSortExpression, string SortDirection)
     {
-        if (sd == SortDirection.Ascending)
+        if (autoLista != null)
         {
-            return autoLista.AsQueryable<Auto>().OrderBy(Auto => se).ToList();
+            if (GridViewSortExpression != string.Empty)
+            {
+                if (SortDirection == "ASC")
+                {
+                    autoLista = autoLista.OrderBy
+                        (a => a.GetType().GetProperty(GridViewSortExpression)
+                            .GetValue(a, null)).ToList();
+                }
+                else
+                {
+                    autoLista = autoLista.OrderByDescending
+                        (a => a.GetType().GetProperty(GridViewSortExpression)
+                            .GetValue(a, null)).ToList();
+                }
+            }
+            return autoLista;
         }
         else
         {
-            return autoLista.AsQueryable<Auto>().OrderByDescending(Auto => se).ToList();
+            return autoLista;
         }
     }
 }
