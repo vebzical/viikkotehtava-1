@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -85,6 +86,8 @@ public partial class g2456_teht7 : System.Web.UI.Page
     {
         GridViewRow row = autoNakyma.Rows[e.RowIndex];
 
+        Regex reg = new Regex(@"^[a-zA-Z'.\s]{7,7}$");
+
         autoLista[e.RowIndex].Merkki = ((TextBox)(row.Cells[1].Controls[0])).Text;
         autoLista[e.RowIndex].Aid = ((TextBox)(row.Cells[2].Controls[0])).Text;
         autoLista[e.RowIndex].Rekkari = ((TextBox)(row.Cells[3].Controls[0])).Text;
@@ -105,5 +108,9 @@ public partial class g2456_teht7 : System.Web.UI.Page
 
         toGridView(autoLista);
 
+    }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        BLAutot.VieAutot(autoLista);
     }
 }

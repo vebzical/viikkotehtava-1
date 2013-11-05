@@ -26,12 +26,18 @@ public class BLAutot
         {
             autoLista.Add(autot.Autot[i]);
         }
-
         return autoLista;
     }
 
-    public static void VieAutot(AutoLista autot) 
+    public static void VieAutot(List<Auto> autoLista) 
     {
+        AutoLista autot = new AutoLista();
+
+        foreach (Auto item in autoLista)
+        {
+            autot.Autot.Add(item);
+        }
+        
         Serialisointi.SerialisoiXml(HttpContext.Current.Server.MapPath("~/App_Data/WanhatAutot.xml"), autot);
     }
 
