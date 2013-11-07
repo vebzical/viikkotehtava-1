@@ -20,5 +20,7 @@
     </asp:GridView>
     <asp:Button ID="addNew" runat="server" OnClick="addNew_Click" Text="Lisää uusi" />
     <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Tallenna" />
+    <br />
+    <asp:Label ID="lblDebug" runat="server"></asp:Label>
 </asp:Content>
 

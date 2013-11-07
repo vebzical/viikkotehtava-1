@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wanhatautot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Auto>
-    <merkki>Audiö</merkki>
-    <aid>101</aid>
-    <rekkari>KJL-132</rekkari>
-    <malli>A4</malli>
-    <vm>2008</vm>
-    <myyntiHinta>39000</myyntiHinta>
-    <sisaanOstoHinta>28250</sisaanOstoHinta>
+    <merkki>Mazda</merkki>
+    <aid>131</aid>
+    <rekkari>TRW-335</rekkari>
+    <malli>626 2.0HB GLX</malli>
+    <vm>1997</vm>
+    <myyntiHinta>37500</myyntiHinta>
+    <sisaanOstoHinta>22916</sisaanOstoHinta>
+  </Auto>
+  <Auto>
+    <merkki>Porsche</merkki>
+    <aid>171</aid>
+    <rekkari>TM-25</rekkari>
+    <malli>911 SC</malli>
+    <vm>1979</vm>
+    <myyntiHinta>30000</myyntiHinta>
+    <sisaanOstoHinta>20000</sisaanOstoHinta>
   </Auto>
   <Auto>
     <merkki>Audi</merkki>
@@ -17,6 +26,15 @@
     <vm>2009</vm>
     <myyntiHinta>30000</myyntiHinta>
     <sisaanOstoHinta>25250</sisaanOstoHinta>
+  </Auto>
+  <Auto>
+    <merkki>Audiö</merkki>
+    <aid>101</aid>
+    <rekkari>KLIO-112</rekkari>
+    <malli>A4</malli>
+    <vm>2008</vm>
+    <myyntiHinta>39000</myyntiHinta>
+    <sisaanOstoHinta>28250</sisaanOstoHinta>
   </Auto>
   <Auto>
     <merkki>Datsun</merkki>
@@ -29,30 +47,12 @@
   </Auto>
   <Auto>
     <merkki>Ford</merkki>
-    <aid>122</aid>
-    <rekkari>TYI-987</rekkari>
-    <malli>Sierra 2.0i Laser</malli>
-    <vm>1989</vm>
-    <myyntiHinta>2000</myyntiHinta>
-    <sisaanOstoHinta>666</sisaanOstoHinta>
-  </Auto>
-  <Auto>
-    <merkki>Ford</merkki>
     <aid>222</aid>
     <rekkari>FYI-987</rekkari>
     <malli>Focus</malli>
     <vm>2001</vm>
     <myyntiHinta>4000</myyntiHinta>
     <sisaanOstoHinta>2000</sisaanOstoHinta>
-  </Auto>
-  <Auto>
-    <merkki>Mazda</merkki>
-    <aid>131</aid>
-    <rekkari>TRW-335</rekkari>
-    <malli>626 2.0HB GLX</malli>
-    <vm>1997</vm>
-    <myyntiHinta>37500</myyntiHinta>
-    <sisaanOstoHinta>22916</sisaanOstoHinta>
   </Auto>
   <Auto>
     <merkki>Nissan</merkki>
@@ -73,22 +73,13 @@
     <sisaanOstoHinta>8250</sisaanOstoHinta>
   </Auto>
   <Auto>
-    <merkki>Porsche</merkki>
-    <aid>171</aid>
-    <rekkari>TM-25</rekkari>
-    <malli>911 SC</malli>
-    <vm>1979</vm>
-    <myyntiHinta>30000</myyntiHinta>
-    <sisaanOstoHinta>20000</sisaanOstoHinta>
-  </Auto>
-  <Auto>
-    <merkki>Volvo</merkki>
-    <aid>911</aid>
-    <rekkari>XYZ-132</rekkari>
-    <malli>V70 T5R</malli>
-    <vm>1997</vm>
-    <myyntiHinta>18950</myyntiHinta>
-    <sisaanOstoHinta>10583</sisaanOstoHinta>
+    <merkki>Ford</merkki>
+    <aid>122</aid>
+    <rekkari>TYI-987</rekkari>
+    <malli>Sierra 2.0i Laser</malli>
+    <vm>1989</vm>
+    <myyntiHinta>2000</myyntiHinta>
+    <sisaanOstoHinta>666</sisaanOstoHinta>
   </Auto>
   <Auto>
     <merkki>Volvo</merkki>
@@ -107,5 +98,14 @@
     <vm>2002</vm>
     <myyntiHinta>9900</myyntiHinta>
     <sisaanOstoHinta>8000</sisaanOstoHinta>
+  </Auto>
+  <Auto>
+    <merkki>Volvo</merkki>
+    <aid>911</aid>
+    <rekkari>XYZ-132</rekkari>
+    <malli>V70 T5R</malli>
+    <vm>1997</vm>
+    <myyntiHinta>18950</myyntiHinta>
+    <sisaanOstoHinta>10583</sisaanOstoHinta>
   </Auto>
 </Wanhatautot>

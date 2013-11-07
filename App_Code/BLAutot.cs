@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Xml;
@@ -65,6 +66,37 @@ public class BLAutot
         else
         {
             return autoLista;
+        }
+    }
+
+    public static string regexString(string tarkistettava, string kohde) 
+    {
+        Regex regMerkki = new Regex(@"^[a-zA-Z]{1,15}$");
+        Regex regAid = new Regex(@"^[0-9]{1,9}$");
+        Regex regRekisteri = new Regex(@"^([a-zA-Z]{1,3})-([0-9]{1,3})$");
+        Regex regMalli = new Regex(@"^[\S*\s*]{1,20}$");
+        Regex regVm = new Regex(@"^[0-9]{4}$");
+        Regex regMyyntiHinta = new Regex(@"^[0-9]{1,9}$");
+        Regex regSOstoHinta = new Regex(@"^[0-9]{1,9}$");
+
+        switch (kohde)
+        {
+            case "Merkki":
+                return regMalli.Match(tarkistettava).ToString();
+            case "Aid":
+                return regAid.Match(tarkistettava).ToString();
+            case "Rekisteri":
+                return regRekisteri.Match(tarkistettava).ToString();
+            case "Malli":
+                return regMalli.Match(tarkistettava).ToString();
+            case "Vm":
+                return regVm.Match(tarkistettava).ToString();
+            case "MyyntiHinta":
+                return regMyyntiHinta.Match(tarkistettava).ToString();
+            case "SOstoHinta":
+                return regSOstoHinta.Match(tarkistettava).ToString();
+            default:
+                return "Tapahtui virhe";
         }
     }
 }

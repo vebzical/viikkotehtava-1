@@ -86,15 +86,13 @@ public partial class g2456_teht7 : System.Web.UI.Page
     {
         GridViewRow row = autoNakyma.Rows[e.RowIndex];
 
-        Regex reg = new Regex(@"^[a-zA-Z'.\s]{7,7}$");
-
-        autoLista[e.RowIndex].Merkki = ((TextBox)(row.Cells[1].Controls[0])).Text;
-        autoLista[e.RowIndex].Aid = ((TextBox)(row.Cells[2].Controls[0])).Text;
-        autoLista[e.RowIndex].Rekkari = ((TextBox)(row.Cells[3].Controls[0])).Text;
-        autoLista[e.RowIndex].Malli = ((TextBox)(row.Cells[4].Controls[0])).Text;
-        autoLista[e.RowIndex].Vm = int.Parse(((TextBox)(row.Cells[5].Controls[0])).Text);
-        autoLista[e.RowIndex].MyyntiHinta = int.Parse(((TextBox)(row.Cells[6].Controls[0])).Text);
-        autoLista[e.RowIndex].SOstoHinta = int.Parse(((TextBox)(row.Cells[7].Controls[0])).Text);
+        autoLista[e.RowIndex].Merkki = BLAutot.regexString(((TextBox)(row.Cells[1].Controls[0])).Text, "Merkki");
+        autoLista[e.RowIndex].Aid = BLAutot.regexString((((TextBox)(row.Cells[2].Controls[0])).Text), "Aid");
+        autoLista[e.RowIndex].Rekkari = BLAutot.regexString((((TextBox)(row.Cells[3].Controls[0])).Text), "Rekkari");
+        autoLista[e.RowIndex].Malli = BLAutot.regexString((((TextBox)(row.Cells[4].Controls[0])).Text), "Malli");
+        autoLista[e.RowIndex].Vm = int.Parse(BLAutot.regexString((((TextBox)(row.Cells[5].Controls[0])).Text), "Vm"));
+        autoLista[e.RowIndex].MyyntiHinta = int.Parse(BLAutot.regexString((((TextBox)(row.Cells[6].Controls[0])).Text), "MyyntiHinta"));
+        autoLista[e.RowIndex].SOstoHinta = int.Parse(BLAutot.regexString((((TextBox)(row.Cells[6].Controls[0])).Text), "SOstoHinta"));
 
         autoNakyma.EditIndex = -1;
         toGridView(autoLista);
