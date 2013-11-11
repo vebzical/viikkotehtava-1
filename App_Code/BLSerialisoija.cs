@@ -47,4 +47,23 @@ public class Serialisointi
             }
 
         }
+
+        public static void deSerialisoiKayttajat(string filePath, ref Users kayttajat) 
+        {
+            XmlSerializer deserializer = new XmlSerializer(typeof(Users));
+            try
+            {
+                FileStream xmlFile = new FileStream(filePath, FileMode.Open);
+                kayttajat = (Users)deserializer.Deserialize(xmlFile);
+                xmlFile.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+
+            }
+        }
 }

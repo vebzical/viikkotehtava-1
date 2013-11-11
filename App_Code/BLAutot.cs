@@ -99,4 +99,20 @@ public class BLAutot
                 return "Tapahtui virhe";
         }
     }
+
+    public static bool authenticateUser(string userName, string passWord) 
+    {
+        Users kayttajat = new Users();
+
+        Serialisointi.deSerialisoiKayttajat(HttpContext.Current.Server.MapPath("~/App_Data/Kayttajat.xml"), ref kayttajat);
+
+        for (int i = 0; i < kayttajat.kayttajat.Count; i++)
+        {
+            if (userName == kayttajat.kayttajat[i].UserName && passWord == kayttajat.kayttajat[i].Password)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

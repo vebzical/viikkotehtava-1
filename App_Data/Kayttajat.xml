@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+  <User>
+    <UserID>0</UserID>
+    <Name>Esa Salesa</Name>
+    <UserName>salesa</UserName>
+    <Password>vepsäsaakurssista5</Password>
+  </User>
+  <User>
+    <UserID>1</UserID>
+    <Name>Joku Mies</Name>
+    <UserName>Jokunen</UserName>
+    <Password>salasana</Password>
+  </User>
+</Users>

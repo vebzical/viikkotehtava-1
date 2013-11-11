@@ -43,10 +43,15 @@ public partial class g2456_teht7 : System.Web.UI.Page
         else
         {
             autoLista = (List<Auto>)ViewState["autoLista"];
+            if ((bool)ViewState["loggedIn"])
+            {
+                lblInfo.Text = "Kirjaudutuminen onnistui";
+            }
         }
     }
     protected void initMyStuff() 
     {
+        ViewState["loggedIn"] = false;
         autoLista = BLAutot.HaeAutot();
         toGridView(autoLista);
     }
@@ -110,5 +115,38 @@ public partial class g2456_teht7 : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
         BLAutot.VieAutot(autoLista);
+    }
+    protected void LoginWindow_Authenticate(object sender, AuthenticateEventArgs e)
+    {
+        string userName = LoginWindow.UserName.ToString();
+        string passWord = LoginWindow.Password.ToString();
+
+        if (BLAutot.authenticateUser(LoginWindow.UserName.ToString(), LoginWindow.Password.ToString()))
+        {
+            if (LoginWindow.RememberMeSet)
+            {
+                ViewState["userName"] = LoginWindow.UserName.ToString();
+                ViewState["password"] = LoginWindow.Password.ToString();
+            }
+            ViewState["loggedIn"] = true;
+            lblInfo.Text = "Kirjaudutuminen onnistui";
+            e.Authenticated = true;
+        }
+        else
+        {
+            e.Authenticated = false;
+        } 
+    }
+    protected void LoginWindow_LoggingIn(object sender, LoginCancelEventArgs e)
+    {
+        lblInfo.Text = "Kirjaudutaan sisään...";
+    }
+    protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+    {
+        ViewState["loggedIn"] = false;
+    }
+    protected void LoginWindow_LoginError(object sender, EventArgs e)
+    {
+        lblInfo.Text = "Kirjautuminen epäonnistui";
     }
 }

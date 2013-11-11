@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
     <asp:GridView ID="autoNakyma" runat="server" 
         AllowSorting="True" 
         AllowPaging="True" 
@@ -21,6 +22,12 @@
     <asp:Button ID="addNew" runat="server" OnClick="addNew_Click" Text="Lisää uusi" />
     <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Tallenna" />
     <br />
-    <asp:Label ID="lblDebug" runat="server"></asp:Label>
+    <asp:Login ID="LoginWindow" runat="server" 
+        OnAuthenticate="LoginWindow_Authenticate" 
+        OnLoggingIn="LoginWindow_LoggingIn" 
+        OnLoginError="LoginWindow_LoginError" 
+        RememberMeText="Remember me.">
+    </asp:Login>
+    <asp:Label ID="lblInfo" runat="server"></asp:Label>
 </asp:Content>
 
