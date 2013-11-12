@@ -123,11 +123,6 @@ public partial class g2456_teht7 : System.Web.UI.Page
 
         if (BLAutot.authenticateUser(LoginWindow.UserName.ToString(), LoginWindow.Password.ToString()))
         {
-            if (LoginWindow.RememberMeSet)
-            {
-                ViewState["userName"] = LoginWindow.UserName.ToString();
-                ViewState["password"] = LoginWindow.Password.ToString();
-            }
             ViewState["loggedIn"] = true;
             lblInfo.Text = "Kirjaudutuminen onnistui";
             e.Authenticated = true;
@@ -144,6 +139,7 @@ public partial class g2456_teht7 : System.Web.UI.Page
     protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
     {
         ViewState["loggedIn"] = false;
+        e.Cancel = true;
     }
     protected void LoginWindow_LoginError(object sender, EventArgs e)
     {

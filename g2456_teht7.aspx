@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
+    <asp:LoginName ID="LoginName1" runat="server" />
     <asp:GridView ID="autoNakyma" runat="server" 
         AllowSorting="True" 
         AllowPaging="True" 
