@@ -3,8 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:LoginStatus ID="LoginStatus1" runat="server" OnLoggingOut="LoginStatus1_LoggingOut" />
-    <asp:LoginName ID="LoginName1" runat="server" />
+    <asp:LoginStatus ID="LoginStatus1" runat="server" 
+        OnLoggingOut="LoginStatus1_LoggingOut" />
     <asp:GridView ID="autoNakyma" runat="server" 
         AllowSorting="True" 
         AllowPaging="True" 
@@ -27,7 +27,7 @@
         OnAuthenticate="LoginWindow_Authenticate" 
         OnLoggingIn="LoginWindow_LoggingIn" 
         OnLoginError="LoginWindow_LoginError" 
-        RememberMeText="Remember me.">
+        RememberMeText="Remember me." OnLoggedIn="LoginWindow_LoggedIn">
     </asp:Login>
     <asp:Label ID="lblInfo" runat="server"></asp:Label>
 </asp:Content>
