@@ -12,3 +12,10 @@ Sivulla k‰ytt‰j‰‰ tervehdit‰‰n kuten kuvasta n‰kyy.
 
 ![Alt text](/images/vk0teht.png "kuva")
 
+
+
+Salesa
+aspnet12
+
+Jokunen
+salasana1
