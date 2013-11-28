@@ -13,7 +13,7 @@ using System.Xml.Serialization;
 public class AutoLista
 {
     [XmlElement("Auto")]
-        public List<Auto> Autot { get; set; }
+    public List<Auto> Autot { get; set; }
 
 	public AutoLista()
 	{
